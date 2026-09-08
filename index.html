@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nạp Firmware ESP32 1-Click</title>
+  <!-- Thư viện ESP Web Tools -->
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
+  ></script>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background: #f4f4f9; }
+    .card { background: white; padding: 30px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    button { background: #007bff; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Cập Nhật Firmware ESP32</h1>
+    <p>Kết nối ESP32 qua cáp USB và nhấn nút bên dưới để bắt đầu.</p>
+    
+    <!-- Nút bấm nạp trực tiếp -->
+    <esp-web-install-button manifest="manifest.json">
+      <button slot="activate">Nạp Firmware Ngay</button>
+    </esp-web-install-button>
+  </div>
+</body>
+</html>
